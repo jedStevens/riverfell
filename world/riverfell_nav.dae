@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author>Anonymous</author>
+		<authoring_tool>Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com)</authoring_tool>
+	</contributor>
+	<created>2016-11-26T21:05:18Z</created>
+	<modified>2016-11-26T21:05:18Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_geometries>
+	<geometry id="id-mesh-2" name="Plane.002">
+		<mesh>
+			<source id="id-mesh-2-positions">
+				<float_array id="id-mesh-2-positions-array" count="30"> -9.911476135253906 3.7503457069396973 0.9613485336303711 1.0 -1.0 0.0 2.8197031021118164 5.584101676940918 -0.5046272277832031 -5.220830917358398 7.381901741027832 0.8442239761352539 6.14849328994751 -1.9167470932006836 -1.4404401779174805 8.70631217956543 0.9142372608184814 -1.7440185546875 -0.3122901916503906 -4.788961410522461 0.0 3.8747448921203613 -4.8808088302612305 -1.2010126113891602 -9.337358474731445 -2.1938443183898926 0.17154693603515625 10.620110511779785 3.865823745727539 -2.5529184341430664</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-positions-array" count="10" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-2-normals">
+				<float_array id="id-mesh-2-normals-array" count="30"> 0.0715353861451149 -0.048127688467502594 0.9962462186813354 0.158513143658638 -0.05880916863679886 0.9855952858924866 0.18027283251285553 -0.0021057771518826485 0.9836115837097168 0.11630603671073914 -0.013672292232513428 0.9931027889251709 0.2376781553030014 -0.04947050288319588 0.9700613617897034 0.24887844920158386 0.03329569473862648 0.9679250717163086 0.12985625863075256 -0.09283730387687683 0.9871516823768616 0.2603228986263275 -0.10419019311666489 0.9598681330680847 0.02609332650899887 -0.08279671519994736 0.9962157011032104 0.2708822786808014 0.0870387852191925 0.9586474299430847</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-normals-array" count="10" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<vertices id="id-mesh-2-vertices">
+				<input semantic="POSITION" source="#id-mesh-2-positions"/>
+			</vertices>
+			<polygons count="5">
+				<input semantic="VERTEX" source="#id-mesh-2-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-2-normals" offset="0"/>
+				<p> 0 1 2 3 </p>
+				<p> 2 1 4 5 </p>
+				<p> 4 1 6 7 </p>
+				<p> 1 0 8 6 </p>
+				<p> 2 5 9 </p>
+			</polygons>
+		</mesh>
+	</geometry>
+</library_geometries>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="Plane" name="Plane" type="NODE">
+			<matrix sid="transform"> 1.0 0.0 0.0 -17.85950469970703 0.0 1.0 0.0 -2.1760425567626953 0.0 0.0 1.0 13.111271858215332 0.0 0.0 0.0 1.0  </matrix>
+			<instance_geometry url="#id-mesh-2">
+			</instance_geometry>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>

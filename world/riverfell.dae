@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author>Anonymous</author>
+		<authoring_tool>Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com)</authoring_tool>
+	</contributor>
+	<created>2016-11-26T21:18:38Z</created>
+	<modified>2016-11-26T21:18:38Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_geometries>
+	<geometry id="id-mesh-2" name="Plane.002">
+		<mesh>
+			<source id="id-mesh-2-positions">
+				<float_array id="id-mesh-2-positions-array" count="51"> -9.911476135253906 3.7503457069396973 0.9613485336303711 2.8197031021118164 5.584101676940918 -0.5046272277832031 -0.022411346435546875 14.883953094482422 0.8442239761352539 1.0 -1.0 0.0 8.70631217956543 0.9142372608184814 -1.7440185546875 3.8747448921203613 -4.8808088302612305 -1.2010126113891602 6.14849328994751 -1.9167470932006836 -1.4404401779174805 -0.3122901916503906 -4.788961410522461 0.0 10.620110511779785 3.865823745727539 -2.5529184341430664 0.5034549236297607 -12.269661903381348 -1.2889842987060547 -10.071788787841797 -21.819223403930664 0.08357548713684082 -3.683580160140991 -19.783445358276367 -0.08797144889831543 -45.04462432861328 -6.777381896972656 -0.6032704710960388 -34.402099609375 -30.8267822265625 -0.8896018862724304 -14.199333190917969 -2.1938443183898926 0.17154693603515625 -10.030585289001465 24.389968872070312 1.5861737728118896 -29.874099731445312 36.136451721191406 1.967393398284912</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-positions-array" count="17" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<source id="id-mesh-2-normals">
+				<float_array id="id-mesh-2-normals-array" count="51"> 0.0238959938287735 -0.06769005209207535 0.9974059462547302 0.16394543647766113 -0.008423108607530594 0.9864192605018616 0.07809686660766602 -0.05890072137117386 0.9951781034469604 0.17038483917713165 -0.02999969571828842 0.9848933219909668 0.25107577443122864 0.024201177060604095 0.9676503539085388 0.2626728117465973 -0.11590930074453354 0.9578844308853149 0.24799340963363647 -0.11804559826850891 0.9615161418914795 0.15997803211212158 -0.07263405621051788 0.9844355583190918 0.2708822786808014 0.0870387852191925 0.9586474299430847 0.412701815366745 -0.110751673579216 0.904080331325531 -0.004455702379345894 -0.012329477816820145 0.999908447265625 0.08655048906803131 -0.02529984340071678 0.9959105253219604 -0.02713095396757126 -0.03729362040758133 0.9989318251609802 -0.030549027025699615 -0.02539139986038208 0.99920654296875 -0.008087405003607273 -0.07281716167926788 0.9972838759422302 0.01348918117582798 -0.03015228733420372 0.99945068359375 -0.018768884241580963 -0.04260383918881416 0.9989013075828552</float_array>
+				<technique_common>
+				<accessor source="#id-mesh-2-normals-array" count="17" stride="3">
+					<param name="X" type="float"/>
+					<param name="Y" type="float"/>
+					<param name="Z" type="float"/>
+				</accessor>
+				</technique_common>
+			</source>
+			<vertices id="id-mesh-2-vertices">
+				<input semantic="POSITION" source="#id-mesh-2-positions"/>
+			</vertices>
+			<polygons count="19">
+				<input semantic="VERTEX" source="#id-mesh-2-vertices" offset="0"/>
+				<input semantic="NORMAL" source="#id-mesh-2-normals" offset="0"/>
+				<p> 0 1 2 </p>
+				<p> 3 4 1 </p>
+				<p> 3 5 6 </p>
+				<p> 0 7 3 </p>
+				<p> 1 4 8 </p>
+				<p> 7 9 5 </p>
+				<p> 7 10 11 </p>
+				<p> 10 12 13 </p>
+				<p> 0 12 14 </p>
+				<p> 0 15 16 </p>
+				<p> 0 3 1 </p>
+				<p> 3 6 4 </p>
+				<p> 3 7 5 </p>
+				<p> 0 14 7 </p>
+				<p> 7 11 9 </p>
+				<p> 7 14 10 </p>
+				<p> 10 14 12 </p>
+				<p> 0 16 12 </p>
+				<p> 0 2 15 </p>
+			</polygons>
+		</mesh>
+	</geometry>
+</library_geometries>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="Plane" name="Plane" type="NODE">
+			<matrix sid="transform"> 1.0 0.0 0.0 -17.85950469970703 0.0 1.0 0.0 -2.1760425567626953 0.0 0.0 1.0 13.111271858215332 0.0 0.0 0.0 1.0  </matrix>
+			<instance_geometry url="#id-mesh-2">
+			</instance_geometry>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>
