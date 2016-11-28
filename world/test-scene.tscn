@@ -17,7 +17,7 @@ script/script = ExtResource( 1 )
 [node name="player" type="KinematicBody" parent="."]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.581, 22.842, 46.1924 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.73, 0.586948, 12.3139 )
 input/ray_pickable = true
 input/capture_on_drag = false
 shape_count = 0
@@ -41,32 +41,103 @@ up_vector = Vector3( 0, 1, 0 )
 
 [node name="props" type="Spatial" parent="world/riverfell"]
 
-editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="riverfell_lamp_post" parent="world/riverfell/props" instance=ExtResource( 5 )]
+[node name="light" type="Spatial" parent="world/riverfell/props"]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1568, -0.699962, 14.3361 )
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.596459, 0, 0.802643, 0, 1, 0, -0.802643, 0, -0.596459, 14.7629, 0.934772, 16.4218 )
 
-[node name="riverfell_lamp_post2" parent="world/riverfell/props" instance=ExtResource( 5 )]
+[node name="riverfell_lamp_post" parent="world/riverfell/props/light" instance=ExtResource( 5 )]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.6, -1.2, 6.53696 )
+transform/local = Transform( -0.59646, 0, -0.802644, 0, 1, 0, 0.802644, 0, -0.59646, 0.754187, -0.887702, -0.630118 )
 
-[node name="rocks" parent="world/riverfell/props" instance=ExtResource( 6 )]
+[node name="rocks4" parent="world/riverfell/props/light" instance=ExtResource( 6 )]
 
-transform/local = Transform( -0.939492, 0, -0.342571, 0, 1, 0, 0.342571, 0, -0.939492, 22.0228, -1.39278, 5.88642 )
+[node name="rocks3" parent="world/riverfell/props/light" instance=ExtResource( 6 )]
 
-[node name="rocks3" parent="world/riverfell/props" instance=ExtResource( 6 )]
+transform/local = Transform( 0.285406, 0, 0.958407, 0, 1, 0, -0.958407, 0, 0.285406, 1.65953, -0.636623, -0.0647326 )
 
-transform/local = Transform( -0.939492, 0, -0.342571, 0, 1, 0, 0.342571, 0, -0.939492, 13.0706, -0.448883, 13.2722 )
+[node name="light4" type="Spatial" parent="world/riverfell/props"]
 
-[node name="rocks2" parent="world/riverfell/props" instance=ExtResource( 6 )]
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.596459, 0, 0.802643, 0, 1, 0, -0.802643, 0, -0.596459, 24.2367, -1.1711, 6.23611 )
 
-transform/local = Transform( -0.596459, 0, 0.802643, 0, 1, 0, -0.802643, 0, -0.596459, 23.0646, -0.756161, 7.17988 )
+[node name="riverfell_lamp_post" parent="world/riverfell/props/light4" instance=ExtResource( 5 )]
 
-[node name="rocks4" parent="world/riverfell/props" instance=ExtResource( 6 )]
+transform/local = Transform( -0.59646, 0, -0.802644, 0, 1, 0, 0.802644, 0, -0.59646, 0.754187, -0.887702, -0.630118 )
 
-transform/local = Transform( -0.596459, 0, 0.802643, 0, 1, 0, -0.802643, 0, -0.596459, 14.1124, 0.18774, 14.5656 )
+[node name="rocks4" parent="world/riverfell/props/light4" instance=ExtResource( 6 )]
+
+[node name="rocks3" parent="world/riverfell/props/light4" instance=ExtResource( 6 )]
+
+transform/local = Transform( 0.285406, 0, 0.958407, 0, 1, 0, -0.958407, 0, 0.285406, 1.65953, -0.636623, -0.0647326 )
+
+[node name="light5" type="Spatial" parent="world/riverfell/props"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -0.596459, 0, 0.802643, 0, 1, 0, -0.802643, 0, -0.596459, 35.9277, 6.1453, 12.5731 )
+
+[node name="riverfell_lamp_post" parent="world/riverfell/props/light5" instance=ExtResource( 5 )]
+
+transform/local = Transform( -0.59646, 0, -0.802644, 0, 1, 0, 0.802644, 0, -0.59646, 0.754187, -0.887702, -0.630118 )
+
+[node name="rocks4" parent="world/riverfell/props/light5" instance=ExtResource( 6 )]
+
+[node name="rocks3" parent="world/riverfell/props/light5" instance=ExtResource( 6 )]
+
+transform/local = Transform( 0.285406, 0, 0.958407, 0, 1, 0, -0.958407, 0, 0.285406, 1.65953, -0.636623, -0.0647326 )
+
+[node name="light6" type="Spatial" parent="world/riverfell/props"]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.230561, 0, 0.973057, 0, 1, 0, -0.973057, 0, 0.230561, 28.6609, 6.65155, 22.0548 )
+
+[node name="riverfell_lamp_post" parent="world/riverfell/props/light6" instance=ExtResource( 5 )]
+
+transform/local = Transform( -0.59646, 0, -0.802644, 0, 1, 0, 0.802644, 0, -0.59646, 0.754187, -0.887702, -0.630118 )
+
+[node name="rocks4" parent="world/riverfell/props/light6" instance=ExtResource( 6 )]
+
+[node name="rocks3" parent="world/riverfell/props/light6" instance=ExtResource( 6 )]
+
+transform/local = Transform( 0.285406, 0, 0.958407, 0, 1, 0, -0.958407, 0, 0.285406, 1.65953, -0.636623, -0.0647326 )
+
+[node name="light2" type="Spatial" parent="world/riverfell/props"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.999786, 0, -0.0206785, 0, 1, 0, 0.0206785, 0, 0.999786, 21.7821, 3.75357, 18.3798 )
+
+[node name="riverfell_lamp_post" parent="world/riverfell/props/light2" instance=ExtResource( 5 )]
+
+transform/local = Transform( -0.59646, 0, -0.802644, 0, 1, 0, 0.802644, 0, -0.59646, 0.754187, -0.887702, -0.630118 )
+
+[node name="rocks4" parent="world/riverfell/props/light2" instance=ExtResource( 6 )]
+
+[node name="rocks3" parent="world/riverfell/props/light2" instance=ExtResource( 6 )]
+
+transform/local = Transform( 0.285406, 0, 0.958407, 0, 1, 0, -0.958407, 0, 0.285406, 1.65953, -0.636623, -0.0647326 )
+
+[node name="light3" type="Spatial" parent="world/riverfell/props"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.999786, 0, -0.0206785, 0, 1, 0, 0.0206785, 0, 0.999786, 28.3187, 2.90873, 10.6941 )
+
+[node name="riverfell_lamp_post" parent="world/riverfell/props/light3" instance=ExtResource( 5 )]
+
+transform/local = Transform( -0.59646, 0, -0.802644, 0, 1, 0, 0.802644, 0, -0.59646, 0.754187, -0.887702, -0.630118 )
+
+[node name="rocks4" parent="world/riverfell/props/light3" instance=ExtResource( 6 )]
+
+transform/local = Transform( -0.760899, 0.523664, -0.383157, 0.473391, 0.851856, 0.224146, 0.443772, -0.0108309, -0.896075, 1.05656, -1.04918, -0.554385 )
+
+[node name="rocks3" parent="world/riverfell/props/light3" instance=ExtResource( 6 )]
+
+transform/local = Transform( 0.285406, 0, 0.958408, 0, 1, 0, -0.958408, 0, 0.285406, 1.72633, -0.636623, -0.187922 )
 
 [node name="camera_mount" type="Spatial" parent="."]
 
@@ -144,3 +215,4 @@ shadow/zoffset_scale = 0.84
 
 
 [editable path="world/riverfell"]
+[editable path="world/riverfell/riverfell_blend"]

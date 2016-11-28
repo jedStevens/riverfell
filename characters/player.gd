@@ -114,7 +114,9 @@ func _fixed_process(delta):
 		
 		print("Moved: ", motion.length())
 	
-	get_node("../camera_mount").set_translation(get_translation())
+	var cam  = get_translation()
+	get_node("../camera_mount").set_translation(cam)
+	
 	lock_to_nav()
 	
 	if target != null:
