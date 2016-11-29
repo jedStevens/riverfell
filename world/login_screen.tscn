@@ -53,12 +53,12 @@ length = 0.1
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control/error:visibility/opacity")
+tracks/0/path = NodePath("Control/HBoxContainer/Control/error:visibility/opacity")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Control/loading:visibility/opacity")
+tracks/1/path = NodePath("Control/HBoxContainer/Control/loading:visibility/opacity")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
@@ -70,12 +70,12 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control/error:visibility/opacity")
+tracks/0/path = NodePath("Control/HBoxContainer/Control/error:visibility/opacity")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0.0, 1.0 ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Control/loading:visibility/opacity")
+tracks/1/path = NodePath("Control/HBoxContainer/Control/loading:visibility/opacity")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
@@ -86,7 +86,7 @@ length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control/loading:visibility/opacity")
+tracks/0/path = NodePath("Control/HBoxContainer/Control/loading:visibility/opacity")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.0, 0.0 ] }
@@ -97,17 +97,17 @@ length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control/loading:transform/rot")
+tracks/0/path = NodePath("Control/HBoxContainer/Control/loading:transform/rot")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0.0, -360.0 ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Control/loading:visibility/opacity")
+tracks/1/path = NodePath("Control/HBoxContainer/Control/loading:visibility/opacity")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 1.0 ] }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Control/error:visibility/opacity")
+tracks/2/path = NodePath("Control/HBoxContainer/Control/error:visibility/opacity")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
@@ -118,12 +118,12 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control/error:visibility/opacity")
+tracks/0/path = NodePath("Control/HBoxContainer/Control/error:visibility/opacity")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Control/loading:visibility/opacity")
+tracks/1/path = NodePath("Control/HBoxContainer/Control/loading:visibility/opacity")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0.5 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
@@ -210,30 +210,32 @@ margin/right = 1025.0
 margin/bottom = 603.0
 use_top_left = false
 
-[node name="Panel" type="Panel" parent="Control"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 513.0
-margin/top = 301.0
-margin/right = 513.0
-margin/bottom = 301.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 367.0
+margin/left = 333.0
 margin/top = 239.0
-margin/right = 659.0
+margin/right = 693.0
 margin/bottom = 363.0
 alignment = 0
 
-[node name="HSplitContainer" type="HSplitContainer" parent="Control/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 292.0
+margin/bottom = 124.0
+alignment = 0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Control/HBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -247,7 +249,7 @@ split/offset = 0
 split/collapsed = false
 split/dragger_visibility = 0
 
-[node name="username_lbl" type="Label" parent="Control/VBoxContainer/HSplitContainer"]
+[node name="username_lbl" type="Label" parent="Control/HBoxContainer/VBoxContainer/HSplitContainer"]
 
 rect/min_size = Vector2( 140, 0 )
 focus/ignore_mouse = true
@@ -264,7 +266,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="username_edit" type="LineEdit" parent="Control/VBoxContainer/HSplitContainer"]
+[node name="username_edit" type="LineEdit" parent="Control/HBoxContainer/VBoxContainer/HSplitContainer"]
 
 rect/min_size = Vector2( 140, 0 )
 focus/ignore_mouse = false
@@ -282,7 +284,7 @@ focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="HSplitContainer2" type="HSplitContainer" parent="Control/VBoxContainer"]
+[node name="HSplitContainer2" type="HSplitContainer" parent="Control/HBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -296,7 +298,7 @@ split/offset = 0
 split/collapsed = false
 split/dragger_visibility = 0
 
-[node name="token_lbl" type="Label" parent="Control/VBoxContainer/HSplitContainer2"]
+[node name="token_lbl" type="Label" parent="Control/HBoxContainer/VBoxContainer/HSplitContainer2"]
 
 rect/min_size = Vector2( 140, 0 )
 focus/ignore_mouse = true
@@ -313,7 +315,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="token_edit" type="LineEdit" parent="Control/VBoxContainer/HSplitContainer2"]
+[node name="token_edit" type="LineEdit" parent="Control/HBoxContainer/VBoxContainer/HSplitContainer2"]
 
 rect/min_size = Vector2( 140, 0 )
 focus/ignore_mouse = false
@@ -332,7 +334,7 @@ focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="login_btn" type="Button" parent="Control/VBoxContainer"]
+[node name="login_btn" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -350,7 +352,7 @@ text = "Login"
 flat = false
 clip_text = true
 
-[node name="remember" type="CheckBox" parent="Control/VBoxContainer"]
+[node name="remember" type="CheckBox" parent="Control/HBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -367,19 +369,33 @@ text = "Remember my token\?"
 flat = false
 align = 0
 
-[node name="loading" type="Sprite" parent="Control"]
+[node name="Control" type="Control" parent="Control/HBoxContainer"]
 
-transform/pos = Vector2( 635.39, 122.276 )
+rect/min_size = Vector2( 64, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 296.0
+margin/top = 0.0
+margin/right = 360.0
+margin/bottom = 124.0
+__meta__ = { "_edit_group_":true }
+
+[node name="loading" type="Sprite" parent="Control/HBoxContainer/Control"]
+
+transform/pos = Vector2( 64, 64 )
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 4 )
 offset = Vector2( 10.501, 0.631836 )
 
-[node name="error" type="Node2D" parent="Control"]
+[node name="error" type="Node2D" parent="Control/HBoxContainer/Control"]
 
+editor/display_folded = true
 visibility/opacity = 0.0
-transform/pos = Vector2( 391.396, 35.2223 )
+__meta__ = { "_edit_lock_":true }
 
-[node name="label" type="Label" parent="Control/error"]
+[node name="label" type="Label" parent="Control/HBoxContainer/Control/error"]
 
 rect/min_size = Vector2( 140, 0 )
 focus/ignore_mouse = true
@@ -397,7 +413,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="sprite" type="Sprite" parent="Control/error"]
+[node name="sprite" type="Sprite" parent="Control/HBoxContainer/Control/error"]
 
 transform/pos = Vector2( -15.13, -66.4643 )
 transform/scale = Vector2( 0.4, 0.4 )
@@ -459,7 +475,7 @@ __meta__ = { "_editor_icon":ExtResource( 8 ) }
 private_key = "707dbf9c5377afafa5f15ea563bebfd3"
 game_id = "211986"
 
-[connection signal="pressed" from="Control/VBoxContainer/login_btn" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/VBoxContainer/login_btn" to="." method="_on_login_pressed"]
 
 [connection signal="api_authenticated" from="GameJoltAPI" to="." method="_on_GameJoltAPI_api_authenticated"]
 

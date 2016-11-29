@@ -9,7 +9,7 @@ var ID = 1
 var current = null
 
 func _ready():
-	GameJolt = get_node("../GameJoltAPI")
+	GameJolt = get_node("../../../GameJoltAPI")
 	
 	
 	var file = File.new()
@@ -19,9 +19,11 @@ func _ready():
 		file.close()
 		
 		var args = content.split(":")
-		
-		GameJolt.username_cache = args[0]
-		GameJolt.token_cache = args[1]
+		if args.size() < 2:
+			print("Error in the saved username file, no authorized user, GJAPI is disabled")
+		else:
+			GameJolt.username_cache = args[0]
+			GameJolt.token_cache = args[1]
 	
 	GameJolt.data_store_fetch_for_user("characters")
 
@@ -34,7 +36,7 @@ func _on_new_char_pressed():
 	character.intimidation= 5
 	character.purity = 5
 	
-	get_node("../character_edit_panel").load_character(character)
+	get_node("../../character_edit_panel").load_character(character)
 
 func item_selected(item):
 	if current != null:

@@ -8,6 +8,10 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	set_process_input(true)
+	set_process(true)
+
+func _process(delta):
+	get_node("ui").set_size(get_viewport().get_rect().size)
 
 func _input(event):
 	if event.type == InputEvent.MOUSE_MOTION and Input.is_mouse_button_pressed(3):

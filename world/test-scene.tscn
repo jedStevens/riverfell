@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://world/test-scene.gd" type="Script" id=1]
 [ext_resource path="res://characters/player.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://world/riverfell/props/rocks.scn" type="PackedScene" id=6]
 [ext_resource path="res://default_env.tres" type="Environment" id=7]
 [ext_resource path="res://ui/target_flag.msh" type="Mesh" id=8]
+[ext_resource path="res://hud.tscn" type="PackedScene" id=9]
 
 [node name="Spatial" type="Spatial"]
 
@@ -16,6 +17,7 @@ script/script = ExtResource( 1 )
 
 [node name="player" type="KinematicBody" parent="."]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.73, 0.586948, 12.3139 )
 input/ray_pickable = true
@@ -34,6 +36,7 @@ script/script = ExtResource( 2 )
 
 [node name="world" type="Navigation" parent="."]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 up_vector = Vector3( 0, 1, 0 )
 
@@ -141,6 +144,7 @@ transform/local = Transform( 0.285406, 0, 0.958408, 0, 1, 0, -0.958408, 0, 0.285
 
 [node name="camera_mount" type="Spatial" parent="."]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Camera" type="Camera" parent="camera_mount"]
@@ -165,6 +169,7 @@ transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0993588, 0 )
 
 [node name="marker" type="Spatial" parent="."]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="marker"]
@@ -212,6 +217,8 @@ shadow/mode = 3
 shadow/max_distance = 100.0
 shadow/split_weight = 1.0
 shadow/zoffset_scale = 0.84
+
+[node name="hud" parent="." instance=ExtResource( 9 )]
 
 
 [editable path="world/riverfell"]
